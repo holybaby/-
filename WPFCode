@@ -1,0 +1,9 @@
+----------分页---------
+<library:CnPagerNavBar Grid.Row="1" 
+    IsRefresh="{Binding  Path= IsMainRefresh,UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}">
+    <i:Interaction.Triggers>
+        <i:EventTrigger EventName="OnRequestPageData">
+            <local:EventCommand  Command="{Binding Path=MainRequestByPageCommand}"></local:EventCommand>
+        </i:EventTrigger>
+    </i:Interaction.Triggers>
+</library:CnPagerNavBar>
